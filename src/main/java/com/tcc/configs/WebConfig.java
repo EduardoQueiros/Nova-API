@@ -12,7 +12,15 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:3000") // Permitir o domínio do frontend
+                .allowedOrigins("http://localhost:3000",
+                                            "https://tcczada-1j4533w8w-eduardo-queiros-projects.vercel.app/",
+                                            "https://www.rodiziointeligente.systems/",
+                                            "https://tcczada.vercel.app/",
+                                            "https://tcczada-eduardo-queiros-projects.vercel.app/"
+
+                
+                
+                ) // Permitir o domínio do frontend
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Permitir os métodos HTTP
                 .allowedHeaders("*") // Permitir todos os cabeçalhos
                 .exposedHeaders("Authorization") // Caso precise expor cabeçalhos específicos
